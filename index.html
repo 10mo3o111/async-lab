@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>empty-seat</title>
+  </head>
+  <body>
+    <header class="l_header">
+      <section class="c_header">
+        <h1 class="c_header__maintitle">Explore & Learn</h1>
+        <p class="c_header__subtitle">晴れた日は、新しい学びへ</p>
+      </section>
+    </header>
+    <main class="l_main">
+      <article class="l_main__inner c_weather">
+        <section class="c_weather__forecast">
+          <h2 class="c_weather__city">
+            <label for="weatherCity">図書館を選択</label>
+            <select id="weatherCity">
+              <option id="ndl" value="ndl" selected>
+                国立国会図書館（東京本館）
+              </option>
+              <option id="ndl_kansai" value="ndl_kansai">
+                国立国会図書館 関西館
+              </option>
+              <option id="kyoto_u_lib" value="kyoto_u_lib">
+                京大附属図書館
+              </option>
+              <option id="takeo_lib" value="takeo_lib">武雄市図書館</option>
+            </select>
+          </h2>
+          <img
+            src="/loading.gif"
+            alt="現在の天気画像"
+            class="c_weather__image"
+          />
+          <p class="c_weather__now">
+            <span class="c_weather__temperature">temperature</span>
+            <span class="c_weather__description">weather</span>
+          </p>
+        </section>
+        <ul class="c_forecast">
+          <li>
+            <p class="c_forecast__item">
+              <span class="c_forecast__today">Today</span>
+            </p>
+            <p class="c_forecast__range --today">
+              <img
+                class="c_forecast__thermometerIcon"
+                src="/thermometer.svg"
+                alt="温度計のアイコン"
+              />
+              <span class="c_forecast__high">--</span>/
+              <span class="c_forecast__low">--</span>
+            </p>
+          </li>
+          <li>
+            <p class="c_forecast__item">
+              <img
+                src="/loading.gif"
+                alt="明日の天気画像"
+                class="c_forecast__weatherIcon1"
+              />
+              <span class="c_forecast__day">day</span>
+            </p>
+            <p class="c_forecast__range">
+              <img
+                class="c_forecast__thermometerIcon"
+                src="/thermometer.svg"
+                alt="温度計のアイコン"
+              />
+              <span class="c_forecast__high1">--</span>/
+              <span class="c_forecast__low1">--</span>
+            </p>
+          </li>
+          <li>
+            <p class="c_forecast__item">
+              <img
+                src="/loading.gif"
+                class="c_forecast__weatherIcon2"
+                alt="明後日の天気画像"
+              />
+              <span class="c_forecast__day">day</span>
+            </p>
+            <p class="c_forecast__range">
+              <img
+                class="c_forecast__thermometerIcon"
+                src="/thermometer.svg"
+                alt="温度計のアイコン"
+              />
+              <span class="c_forecast__high2">--</span>/
+              <span class="c_forecast__low2">--</span>
+            </p>
+          </li>
+          <li>
+            <p class="c_forecast__item">
+              <img
+                src="/loading.gif"
+                class="c_forecast__weatherIcon3"
+                alt="明明後日の天気画像"
+              />
+              <span class="c_forecast__day">day</span>
+            </p>
+            <p class="c_forecast__range">
+              <img
+                class="c_forecast__thermometerIcon"
+                src="/thermometer.svg"
+                alt="温度計のアイコン"
+              />
+              <span class="c_forecast__high3">--</span>/
+              <span class="c_forecast__low3">--</span>
+            </p>
+          </li>
+        </ul>
+      </article>
+      <section class="l_main__inner c_card">
+        <article class="c_card__content">
+          <h2 class="c_card__title">JavaScript勉強会</h2>
+          <p class="c_card__text">
+            JavaScriptの基礎から実践まで学べる勉強会です。現在の空き状況をリアルタイムで確認できます。
+          </p>
+          <button id="js" class="c_card__btn">空き席状況を確認</button>
+        </article>
+        <article class="c_card__content">
+          <h2 class="c_card__title">セキュリティ対策講座</h2>
+          <p class="c_card__text">最新のサイバーセキュリティ対策を学びます。</p>
+          <button id="security" class="c_card__btn">空き席状況を確認</button>
+        </article>
+        <article class="c_card__content">
+          <h2 class="c_card__title">AIを利用したUX設計</h2>
+          <p class="c_card__text">
+            AI技術を活用したUX設計の手法を紹介します。ユーザー体験を向上させるアイデアを学びましょう。
+          </p>
+          <button id="aiux" class="c_card__btn">空き席状況を確認</button>
+        </article>
+      </section>
+      <p class="c_card__note">
+        古いブラウザでは一部の機能（grid-template-rows:
+        subgrid）が正しく動作しない場合がありますが、最新のブラウザをご利用いただけると、より快適にお楽しみいただけます。
+      </p>
+    </main>
+    <footer class="l_footer">
+      <p class="c_footer__title">JavaScript Portfolio Site</p>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
