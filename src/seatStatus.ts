@@ -1,6 +1,6 @@
 export async function fetchDataFromJson(e: MouseEvent) {
   try {
-    const response = await fetch("../data.json");
+    const response = await fetch("/data.json");
     if (!response.ok) {
       throw new Error("ネットワークエラー: データが取得できませんでした。");
     }
